@@ -1,4 +1,4 @@
-<h1>Editar Vehículo</h1>
+<h1>Editar Vehículos</h1>
 
 <form action="{{ route('vehiculos.update', $vehiculo->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
