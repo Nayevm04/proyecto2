@@ -11,7 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Middlewares de rol para rutas individuales
+    $middleware->alias([
+        'rol.superadmin' => \App\Http\Middleware\RolSuperadmin::class,
+        'rol.admin'      => \App\Http\Middleware\RolAdmin::class,
+        'rol.chofer'     => \App\Http\Middleware\RolChofer::class,
+        'rol.pasajero'   => \App\Http\Middleware\RolPasajero::class,
+    ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
