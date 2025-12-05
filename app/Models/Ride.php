@@ -20,6 +20,11 @@ class Ride extends Model
         'user_id',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     // Relación con Vehículo
     public function vehiculo()
     {
