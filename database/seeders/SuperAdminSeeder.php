@@ -22,7 +22,7 @@ class SuperAdminSeeder extends Seeder
             'email' => 'superadmin@aventones.com',
             'telefono' => '888888888',
             'fotografia' => null,
-            'password' => Hash::make('Admin123!'),
+            'password' => Hash::make('super1234'),
             'rol' => 'superadmin',
             'estado' => 'Activo',
             'activation_token' => null,

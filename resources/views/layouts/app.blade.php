@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Aventones') }}</title>
 
+    @if (app()->environment('testing'))
+    {{-- No cargar Vite durante pruebas --}}
+@else
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+@endif
+
 </head>
 <body class="antialiased bg-gray-100">
 
